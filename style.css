@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+}
+:root{
+    --color-primary: #7562e0;
+    --color-primary-variant: rgba(102, 0, 255, 0.2);
+    --color-white: #fff;
+    --color-light: #f5f5f5;
+    --color-black: #0f0f1b;
+    --color-dark: #4b4a53;
+
+    --container-width-lg: 82%;
+    --container-width-md: 90%;
+    --container-width-sm: 92%;
+
+    --transition: all 400ms ease;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--color-dark);
+    line-height: 1.7;
+}
+
+
+.container{
+    width: var(--container-width-lg);
+    max-width: 1800px;
+    margin: 0 auto;
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+.d-grid{
+    display: grid;
+    place-items: center;
+}
+.lead{
+    width: 65%;
+    margin: 0 auto 3rem;
+    line-height: 1.5;
+}
+.btn{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: inline-block;
+    width: fit-content;
+    padding: 0.8rem 1.6rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.btn:hover{
+    background-color: var(--color-light);
+    color: var(--color-black);
+}
+.btn-primary{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+.btn-primary:hover{
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+.btn-lg{
+    padding: 1.1rem 2rem;
+    font-size: 1.2rem;
+}
+
+section{
+    padding: 6rem 0;
+    margin: 5rem 0;
+}
+h1, h2, h3, h4, h5{
+    color: var(--color-black);
+}
+h1{
+    font-size: 4.4rem;
+    line-height: 1.1;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.4rem;
+}
+h5{
+    font-size: 1rem;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+
+
+
+/* =============================================== Navbar Start ======================================================== */
+nav{
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 14;
+}
+.window-scroll{
+    background-color: var(--color-black);
+    box-shadow: 0 1.5rem 1.5rem rgba(36, 0, 64, 0.2);
+}
+.window-scroll a{
+    color: var(--color-white);
+}
+.window-scroll .nav-logo h3{
+    color: var(--color-white);
+}
+nav a{
+    color: var(--color-black);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+nav a:hover{
+    color: var(--color-primary);
+}
+.nav-container{
+    justify-content: space-between;
+}
+nav button{
+    display: none;
+}
+
+.nav-menu{
+    justify-content: space-between;
+    gap: 4rem;
+}
+/* ================================================ Navbar End ========================================================= */
+
+/* =============================================== Header Start ======================================================== */
+header {
+    position: relative;
+    top: 5rem;
+    height: calc(100vh - 5rem);
+    overflow: hidden;
+}
+.header-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100%;
+}
+.header-left h3{
+    color: var(--color-primary);
+    margin-bottom: 0.6rem;
+}
+.header-left p{
+    margin: 1.2rem 0 2rem;
+    font-weight: 500;
+}
+.header-right{
+    position: relative;
+    height: 100%;
+}
+.header-socials{
+    position: absolute;
+    right: 0;
+    bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+    z-index: 5;
+}
+.header-socials a{
+    color: var(--color-white);
+    transition: var(--transition);
+    cursor: pointer;
+}
+.header-socials a:hover{
+    color: var(--color-black);
+}
+.header-right-bg{
+    position: absolute;
+    width: 70rem;
+    height: 70rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    right: -30rem;
+    bottom: -30rem;
+}
+.header-image{
+    width: 82%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: -3rem;
+    text-align: end;
+}
+.header-image img{
+    width: 81%;
+}
+/* ================================================ Header End ========================================================= */
+
+
+/* ============================================== Services Start ======================================================= */
+section#services{
+    margin-top: 8rem;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 2rem;
+}
+.services-left{
+    background-color: var(--color-primary);
+    padding: 2rem;
+    color: var(--color-light);
+}
+.services-left h1{
+    font-size: 7rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+.services-left h4{
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.services-right h2{
+    margin-bottom: 2rem;
+}
+.services-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+.service-card{
+    background-color: var(--color-light);
+    padding: 4rem 2rem;
+    transition: var(--transition);
+}
+.service-card h5{
+    margin: 1rem 0;
+}
+.service-card:hover{
+    background-color: var(--color-primary);
+}
+.service-card:hover *{
+    color: var(--color-white);
+}
+.services-cards-icon{
+    font-size: 2rem;
+}
+/* =============================================== Services End ======================================================== */
+
+/* ============================================== Portfolio Start ====================================================== */
+#portfolio{
+    background-color: var(--color-light);
+}
+.portfolio-head{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.portfolio-head h3{
+    width: 25%;
+}
+.portfolio-head-right{
+    width: 49%;
+}
+
+.portfolio-projects{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.portfolio-project{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.portfolio-project-image{
+    height: 20rem;
+    display: block;
+    overflow: hidden;
+    border: 1rem solid var(--color-white);
+    box-shadow: 0 0 1.6rem var(--color-primary-variant);
+    transition: var(--transition);
+}
+.portfolio-project-image:hover{
+    box-shadow: none;
+}
+.portfolio-cta{
+    display: flex;
+    gap: 1rem;
+}
+/* =============================================== Portfolio End ======================================================= */
+
+/* =============================================== Contact Start ======================================================= */
+#contact{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    margin: 0;
+}
+.contact-container{
+    font-size: 0.9rem;
+}
+.contact-container h2{
+    color: var(--color-white);
+}
+.contact-container p{
+    margin: 1rem 0 2rem;
+}
+.contact-socials{
+    display: flex;
+    gap: 1rem;
+}
+.contact-socials a{
+    color: var(--color-white);
+    font-size: 1.4rem;
+    transition: var(--transition);
+    padding: 0.3rem;
+    border-radius: 50%;
+}
+.contact-socials a:hover{
+    font-size: 1.2rem;
+    color: var(--color-black);
+    background-color: var(--color-light);
+}
+/* ================================================= Contact End ======================================================= */
+
+/* ================================================= Footer Start ====================================================== */
+footer{
+    text-align: center;
+    background-color: var(--color-primary);
+    padding: 1.2rem 0;
+    color: var(--color-white);
+    border-top: 1px solid var(--color-dark);
+}
+/* ================================================== Footer End ======================================================= */
+
+
+
+
+/* ================================================== Media Queries ================================================ */
+@media screen and (max-width: 1024px) {
+    .container{
+        width: var(--container-width-md);
+    }
+    .lead{
+        margin-top: 0.6rem;
+    }
+    h1{
+        font-size: 3.6rem;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+
+    /* ============ Navbar ================ */
+    nav{
+        background-color: var(--color-black);
+    }
+    .nav-logo h3{
+        color: var(--color-white);
+    }
+    .nav-menu{
+        position: fixed;
+        top: 5rem;
+        right: 0;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        z-index: 14;
+        display: none;
+        perspective: 400px;
+    }
+    .nav-menu li{
+        width: 100%;
+        height: 5.4rem;
+        opacity: 0;
+        animation: flipNavItem 250ms 0s ease forwards;
+        transform-origin: top;
+    }
+    .nav-menu li:nth-child(2){
+        animation-delay: 100ms;
+    }
+    .nav-menu li:nth-child(3){
+        animation-delay: 200ms;
+    }
+    .nav-menu li:nth-child(4){
+        animation-delay: 300ms;
+    }
+    .nav-menu li:nth-child(5){
+        animation-delay: 400ms;
+    }
+    @keyframes flipNavItem {
+        from{
+            transform: rotateX(90deg);
+        }
+        to{
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+    }
+    .nav-menu li a{
+        background-color: var(--color-primary);
+        color: var(--color-light);
+        width: 100%;
+        height: 100%;
+        box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+    }
+    .nav-menu li a:hover{
+        background-color: var(--color-light);
+        color: var(--color-black);
+    }
+    nav button{
+        display: inline-block;
+        background-color: transparent;
+        color: var(--color-white);
+        cursor: pointer;
+        font-size: 1.8rem;
+    }
+    nav button#close-menu-btn{
+        display: none;
+    }
+
+    /* ============ Navbar ================ */
+
+
+    /* ============ Header ================ */
+    header{
+        height: 100%;
+        padding: 10rem 0 0;
+    }
+    .header-container{
+        align-items: flex-end;
+        height: 100%;
+    }
+    .header-left{
+        margin-bottom: 6rem;
+    }
+    .header-right{
+        align-self: flex-end;
+        height: 100%;
+    }
+    .header-right-bg{
+        width: 30rem;
+        height: 30rem;
+        right: 50%;
+        bottom: 50%;
+        transform: translate(50%, 50%);
+    }
+    .header-image{
+        bottom: -1rem;
+        width: 100%;
+        text-align: center;
+    }
+    .header-socials{
+        bottom: 4rem;
+    }
+    .header-socials a{
+        color: var(--color-black);
+    }
+    /* ============ Header ================ */
+
+
+    /* ============ Services ================ */
+    .services-container{
+        grid-template-columns: 1fr;
+    }
+    .services-cards{
+        gap: 2rem;
+    }
+    /* ============ Services ================ */
+
+
+    /* ============ Portfolio ================ */
+    .portfolio-head h3{
+        width: 40%;
+    }
+    .portfolio-head-right{
+        width: auto;
+    }
+    /* ============ Portfolio ================ */
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        width: var(--container-width-sm);
+    }
+    section{
+        padding: 4rem 0;
+        margin: 4rem 0;
+    }
+    h1{
+        font-size: 2.8rem;
+    }
+    h2{
+        font-size: 1.4rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    .btn-lg{
+        font-size: 1rem;
+    }
+
+    /* ============ Navbar ================ */
+    nav button{
+        font-size: 1.5rem;
+    }
+    /* ============ Navbar ================ */
+
+    /* ============ Header ================ */
+    header{
+        height: 100vh;
+        padding: 0;
+    }
+    .header-container{
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+        align-items: flex-start;
+        gap: 0;
+    }
+    .header-left{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .header-left p{
+        margin: 0.5rem 0 1.2rem;
+    }
+    .header-image{
+        position: relative;
+        top: -2rem;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .header-right-bg{
+        bottom: 23%;
+    }
+    .header-socials{
+        bottom: 6rem;
+    }
+    /* ============ Header ================ */
+
+
+    /* ============ Services ================ */
+    .services-cards{
+        grid-template-columns: 1fr;
+    }
+    /* ============ Services ================ */
+
+
+    /* ============ Portfolio ================ */
+    .portfolio-head{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .portfolio-head h3,
+    .portfolio-head-right{
+        width: var(--container-width-sm);
+    }
+    .portfolio-projects{
+        grid-template-columns: 1fr;
+    }
+    /* ============ Portfolio ================ */
+
+}
